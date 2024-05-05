@@ -3,11 +3,18 @@
 # Author : Eshan Roy
 # Author URI : https://github.com/eshanized
 
+echo
+echo "Switching to the Arch Directory..."
+echo
 cd x86_64
 
+echo
+echo "Removing previous database..."
+echo
 rm snigdhaos-extra*
-
-echo "Repo Adding..."
+echo
+echo "Adding All Packages to the database..."
+echo
 repo-add -s -n -R snigdhaos-extra.db.tar.gz *.pkg.tar.zst
 
 sleep 1
@@ -24,11 +31,13 @@ mv snigdhaos-extra.db.tar.gz.sig snigdhaos-extra.db.sig
 mv snigdhaos-extra.files.tar.gz snigdhaos-extra.files
 mv snigdhaos-extra.files.tar.gz.sig snigdhaos-extra.files.sig
 
-
-echo "Repo Updated..."
+echo 
+echo "Database Updated..."
 echo "*******************************************************************************"
-echo "<-- previous directory"
+echo 
+echo "← Going Back to Parent Directory..."
+echo 
 cd ..
 echo "Execution Push script..."
 ./push.sh
-echo "DONE"
+echo "Completed All Operations"
