@@ -27,3 +27,8 @@ mv snigdhaos-extra.files.tar.gz.sig snigdhaos-extra.files.sig
 
 echo "Repo Updated..."
 echo "*******************************************************************************"
+echo "<-- previous directory"
+cd ..
+echo "Execution Push script..."
+./push.sh
+echo "DONE"
